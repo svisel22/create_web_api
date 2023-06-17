@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/hello', methods=['POST'])
+@app.route('/hello', methods=['POST']) #manual configuration which method is allowed
 def hello():
     data = request.get_json()
     name = data.get('name', '')
